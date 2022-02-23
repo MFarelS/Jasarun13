@@ -42,7 +42,7 @@ namaig = 'GAK ADA :)'
 namagithub = 'GAK ADA :)'
 kasihcaption = `Done`
 namakontak1 = 'Swister'
-namakontak2 = ''
+namakontak2 = 'swister'
 
 //kasihcaption = `Done`
 
