@@ -12,8 +12,8 @@ let handler  = async (m, { conn, usedPrefix }) => {
   conn.reply(m.chat, `
 『 *RULES* 』
 
-_*BOTCAHX*_ merupakan suatu program bot whatsapp, yang menggunakan Heroku
-Adapun ketentuan untuk memakai _*BOTCAHX*_. :
+_*Null Bot*_ merupakan suatu program bot whatsapp, yang menggunakan Heroku
+Adapun ketentuan untuk memakai _*Null Bot*_. :
 
 *1.* Pengguna dapat menggunakan semua perintah/command dengan batasan limit sebanyak 50 setiap pengguna terkecuali user premium dengan limit tanpa batas/unlimited, dan tidak melakukan spam terhadap bot.
 *2.* Dilarang Klik Button yg bertujuan nya tidak jelas
@@ -30,18 +30,18 @@ Adapun ketentuan untuk memakai _*BOTCAHX*_. :
 
 *9.* _Kami tidak bertanggung jawab atas kebocoran data pribadi anda_
 
-*10.* _Instagram_ : https://instagram.com/prm2.0?utm_medium=copy_link
+*10.* _Instagram_ : https://instagram.com/veteran_Sweater
 
-*11.* _Bot utama_ wa.me/6282320830684
+*11.* _Bot utama_ wa.me/6281385085827
 
 *────────────────────────*
 ═〔 Donasi 〕═
-『📱』 Pulsa : 081395861695
-『📱』 Dana : 082221792667
+『📱』 Pulsa : 0895410650067
+『📱』 Dana : 0895410650067
 *────────────────────────*
 ═〔 Website 〕═
-『 *1* 』 https://tioprm.herokuapp.com/
-『 *2* 』 https://tiodownloaders.herokuapp.com/
+『 *1* 』 https://NullBot.herokuapp.com/
+『 *2* 』 https://Nullodownloaders.herokuapp.com/
 『 *OFC* 』 *Official Grup Whatsapp* :
 『✓』  ${gc1}
 *────────────────────────*
@@ -62,7 +62,7 @@ Adapun ketentuan untuk memakai _*BOTCAHX*_. :
 『🗄️』  *Memory Usage* ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
 *────────────────────────*
 
-©TioOfc - ©2022
+©NullOfc - ©2022
 
  
 ═〘 ${namabot} 〙 ═
