@@ -1,7 +1,7 @@
 let handler  = async (m, { conn, usedPrefix: _p }) => {
 ye = `@${m.sender.split`@`[0]}`
 let info = `Hai Kak ${ye} beli aja jasa run di link ini
-• https://bit.ly/3H3gy2z
+• wa.me/6289504575881?text=hallo+kakak+saya+mau+jadi+bot
 
 Join grup developer untuk info lebih lanjut,-
 ${gc1}
