@@ -51,7 +51,7 @@ global.packname = 'Null Bot' // ganti aja
 global.author = 'Null Bot' // ganti aja
 
 //yyy
-bc = 'BOT' //Null Bot BROADCAST
+bc = 'NULL BOT' //Null Bot BROADCAST
 footer = '\n© Null Bot'
 namabot = 'Null Bot'
 namalu = 'Swister'
