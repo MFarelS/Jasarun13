@@ -8,31 +8,33 @@ const chats = conn.chats.all()
 const groups = chats.filter(v => v.jid.endsWith('g.us'))
 const defaultMenu = {
   before: `
-┌──〔 ${namabot} 〕─⬣
-│⬡ Hai, %name!
-│
-│⬡ Tersisa *%limit Limit*
-│⬡ Role *%role*
-│⬡ Level *%level (%exp / %maxexp)* 
-│⬡ [%xp4levelup]
-│⬡ %totalexp XP secara Total
-│ 
-│⬡ Hari : *%week %weton* 
-│⬡ Tanggal : *%date*
-│⬡ Tanggal Islam : 
-│⬡ *%dateIslamic*
-│⬡ Waktu: *%time*
-│
-│⬡ Uptime: *%uptime (%muptime)*
-│⬡ Database: %rtotalreg dari %totalreg
-│⬡ Memory Used : *${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB*
-└────────⬣`.trimStart(),
-  header: '┌──〔 %category 〕',
-  body: '├%cmd %islimit %isPremium',
-  footer: '└────⬡\n',
+┏━━「 ${namabot} 」─⬣
+┃◕‣ Hai, %name!
+┃
+┃◕‣ Tersisa %limit Limit
+┃◕‣ Role %role
+┃◕‣ Level %level (%exp / %maxexp)
+┃◕‣ [%xp4levelup]
+┃◕‣ %totalexp XP secara Total
+┃ 
+┃◕‣ Hari : %week %weton
+┃◕‣ Tanggal : %date
+┃◕‣ Tanggal Islam : 
+┃◕‣ %dateIslamic
+┃◕‣ Waktu: %time
+┃
+┃◕‣ Uptime: %uptime (%muptime)
+┃◕‣ Database: %rtotalreg dari %totalreg
+┃◕‣ Memory Used : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
+┃
+┃◕‣ Website store : https://bit.ly/3H3gy2z
+┗━━━━━━━━━⬣`.trimStart(),
+  header: '┏━━「 %category 」',
+  body: '┃◕‣ %cmd %islimit %isPremium',
+  footer: '┗━━━━⬡\n',
   after: `
-*%npmname@^%version*
-${'```%npmdesc```'}
+%npmname Versi %version
+${'%npmdesc'}
 `,
 }
 let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
@@ -168,7 +170,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
 
 
   try {
-    let package = JSON.parse(await fs.promises.readFile(path.join(__dirname, '../package.json')).catch(_ => '{}'))
+    let package = JSON.parse(await fs.promises.readFile(path.join(_dirname, '../package.json')).catch( => '{}'))
     let { exp, limit, level, role, registered } = global.db.data.users[m.sender]
     let { min, xp, max } = levelling.xpRange(level, global.multiplier)
     let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
@@ -226,138 +228,154 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       return conn.relayWAMessage(conn.prepareMessageFromContent(m.chat, {
         "listMessage": {
           "title": `${ucapan()}, ${name}`.trim(),
-          "description": `
-©TioOfc
-                                `.trim(),
+          "description": `© BOTCAHX
+         `.trim(),
           "footerText": "Jika menemukan bug,error atau kesulitan dalam penggunaan silahkan laporkan/tanyakan kepada owner.",
           "buttonText": "Click Here",
           "listType": "SINGLE_SELECT",
           "sections": [
             {
-            "title": `Runtime ${uptime} - ©TioOfc`,
+            "title": `◕‣ ${ucapan()}  : ${week} ${weton} : ${date} `,
               "rows": [
                 {
-                  "title": `『🧾』Semua Perintah`,
+                  "title": `[🧾] Semua Perintah`,
                   "description": "Memberikan Semua Fitur Bot",
                   "rowId": ".? all"
                 }, {
-                  "title": "『🕋』Islam",
+                  "title": "[🕋] Islam",
                   "description": "Menu Tentang Islam",
                   "rowId": ".? quran"
                 }, {
-                  "title": "『🏫』Edukasi",
+                  "title": "[🏫] Edukasi",
                   "description": "Menu Edukasi",
                   "rowId": ".? edukasi"
                 }, {
-                  "title": "『📰』News",
+                  "title": "[📰] News",
                   "description": "Menu Berita",
                   "rowId": ".? News"
                 },  {
-                  "title": "『🎮』Game",
+                  "title": "[🎮] Game",
                   "description": "Menu Game",
                   "rowId": ".? game"
                 }, {
-                  "title": "『🗺️』Epic Rpg",
+                  "title": "[🗺️] Epic Rpg",
                   "description": "Menu Game RPG",
                   "rowId": ".? rpg"
                 }, {
-                  "title": "『📈』XP",
+                  "title": "[📈] XP",
                   "description": "XP Dan Level",
                   "rowId": ".? xp"
                 },  {
-                  "title": "『🔞』NSFW",
+                  "title": "[🔞] NSFW",
                   "description": "Menu Dewasa",
                   "rowId": ".? nsfw"
                 }, {
-                  "title": "『🖼️』Random Image",
+                  "title": "[🖼️] Random Image",
                   "description": "Menu Foto Random",
                   "rowId": ".? image"
                 }, {
-                  "title": "『🎇』Stiker",
+                  "title": "[🎇] Stiker",
                   "description": "Menu Buat Stiker",
                   "rowId": ".? stiker"
                 }, {
-                  "title": "『🐚』Kerang Ajaib",
+                  "title": "[🐚] Kerang Ajaib",
                   "description": "Menurut Kerang ajaib....",
                   "rowId": ".? kerangajaib"
                 }, {
-                  "title": "『📑』Quotes",
+                  "title": "[📑] Quotes",
                   "description": "Menu Quotes",
                   "rowId": ".? quotes"
                 }, {
-                  "title": "『🏛️』Admin",
+                  "title": "[🏛️] Admin",
                   "description": "Menu Admin Group",
                   "rowId": ".? admin"
                 }, {
-                  "title": "『🏢』Grup",
+                  "title": "[🏢] Grup",
                   "description": "Menu Group",
                   "rowId": ".? grup"
                 }, {
-                  "title": "『🔝』Premium",
+                  "title": "[🔝] Premium",
                   "description": "Menu Untuk Premium",
                   "rowId": ".? premium"
                 }, {
-                  "title": "『🖥️』Internet",
+                  "title": "[🖥️] nternet",
                   "description": "Cari Sesuatu Di Bot",
                   "rowId": ".? internet"
                 }, {
-                  "title": "『🥷』Anonymous",
+                  "title": "[🥷] Anonymous",
                   "description": "Mainkan Anonymous Chat",
                   "rowId": ".? anonymous"
                 }, {
-                  "title": "『✒️』Nulis & Logo",
+                  "title": "[✒️] Nulis & Logo",
                   "description": "Menu Nulis & Logo",
                   "rowId": ".? nulis"
                 }, {
-                  "title": "『📺』Downloader",
+                  "title": "[📺] Downloader",
                   "description": "Download Sesuatu Di Bot",
                   "rowId": ".? downloader"
                 }, {
-                  "title": "『🔧』Tools",
+                  "title": "[🔧] Tools",
                   "description": "Tools Yang Bisa di Gunakan Di Bot",
                   "rowId": ".? tools"
                 }, {
-                  "title": "『🎇』Fun",
+                  "title": "[🎇] Fun",
                   "description": "Menu Ceria",
                   "rowId": ".? fun"
                 }, {
-                  "title": "『📂』Database",
+                  "title": "[📂] Database",
                   "description": "Simpan Sesuatu Di Bot",
                   "rowId": ".? database"
                 }, {
-                  "title": "『📝』Vote & Absen",
+                  "title": "[📝] Vote & Absen",
                   "description": "Menu Vote & Absen",
                   "rowId": ".? vote"
                 }, {
-                  "title": "『🎙️』Pengubah Suara",
+                  "title": "[🎙️] Pengubah Suara",
                   "description": "Ubah Suaramu",
                   "rowId": ".? audio"
                 }, {
-                  "title": "『🤖』Jadi Bot",
+                  "title": "[🤖] Jadi Bot",
                   "description": "Menjadi Bot Sementara",
                   "rowId": ".? jadibot"
                 }, {
-                  "title": "『⛩️』Anime",
+                  "title": "[⛩️] Anime",
                   "description": "Cari Anime Di Bot",
                   "rowId": ".? anime"
                 }, {
-                  "title": "『ℹ️』Info",
+                  "title": "[ℹ️] Info",
                   "description": "Info Tentang Bot",
                   "rowId": ".? info"
                 }, {
-                  "title": "『-』Tanpa Kategori",
+                  "title": "[◻️] Tanpa Kategori",
                   "description": "Untuk Save Nomor",
                   "rowId": ".? tanpakategori"
                 }, {
-                  "title": "『👨‍💻』Owner",
+                  "title": "[👨‍💻] Owner",
                   "description": "Menu Khusu Owner",
                   "rowId": ".? owner"
+                }, {
+              	"title": "[💳] Sewa Bot",
+                  "description": "Pembayaran Hanya Via Pulsa & Dana",
+                  "rowId": ".sewa"
+                }, {
+              	"title": "[☁️] Uptime",
+                  "description": "Waktu Runtime Bot",
+                  "rowId": ".runtime"
+                }, {
+              	"title": "[⚠️] Peraturan",
+                  "description": "Peraturan Bot Yang Harus Di Patuhi",
+                  "rowId": ".rules"
+                }, {
+              	"title": "[🖱️] Developer",
+                  "description": "Pemilik Bot",
+                  "rowId": ".owner"
                 }
               ]
             }
           ], "contextInfo": {
             "stanzaId": m.key.id,
-            "participant": m.sender,
+            "participant": "0@s.whatsapp.net",
+            "remoteJid": "6283136505591-1614953337@g.us",
             "quotedMessage": m.message
           }
         }
@@ -434,14 +452,13 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       exp: exp - min,
       maxexp: xp,
       totalexp: exp,
-      xp4levelup: max - exp <= 0 ? `Siap untuk *${_p}levelup*` : `${max - exp} XP lagi untuk levelup`,
+      xp4levelup: max - exp <= 0 ? `Siap untuk ${_p}levelup` : `${max - exp} XP lagi untuk levelup`,
       github: package.homepage ? package.homepage.url || package.homepage : '[unknown github url]',
       level, limit, name, weton, week, date, dateIslamic, time, totalreg, rtotalreg, role,
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    await conn.send3ButtonLoc(m.chat, await (await fetch(fla + teks)).buffer(), text.trim(), footer, 'Owner Bot', '.owner', 'Donasi', '.donasi', 'Rules', '.infobot', m)
-    //await conn.send3ButtonLoc(m.chat, await (await fetch(https://i.ibb.co/NpX1j11/donasi.jpg`)).buffer(), text.trim(), 'BOTCAHBOTz', 'Pemilik Bot', '.owner', 'Donasi', '.donasi', 'Rules', '.infobot', m)
+    await conn.send2ButtonLoc(m.chat, await(await fetch(fla + teks)).buffer(), text.trim(), `Runtime : ${uptime}\n${week} ${date}`, 'Pemilik Bot', `${_p}owner`, 'Donasi', `${_p}donasi`, m)
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
     throw e
@@ -466,18 +483,18 @@ function clockString(ms) {
 }
 function ucapan() {
   const time = moment.tz('Asia/Jakarta').format('HH')
-  res = "Selamat dinihari🌃"
+  res = "Selamat dinihari🌌"
   if (time >= 4) {
     res = "Selamat Pagi🌄"
   }
   if (time > 10) {
-    res = "Selamat Siang🌄"
+    res = "Selamat Siang🏙️"
   }
   if (time >= 15) {
     res = "Selamat Sore🌇"
   }
   if (time >= 18) {
-    res = "Selamat Malam🌉"
+    res = "Selamat Malam🌃"
   }
   return res
 }
