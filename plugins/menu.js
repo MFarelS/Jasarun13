@@ -27,7 +27,7 @@ const defaultMenu = {
 ┃◕‣ Database: %rtotalreg dari %totalreg
 ┃◕‣ Memory Used : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
 ┃
-┃◕‣ Jadi Owner Bot : wa.me/6289504575881
+┃◕‣ Jadi Owner Bot :  https://bit.ly/3H3gy2z
 ┗━━━━━━━━━⬣`.trimStart(),
   header: '┏━━「 %category 」',
   body: '┃◕‣ %cmd %islimit %isPremium',
