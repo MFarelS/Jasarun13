@@ -22,6 +22,7 @@ const defaultMenu = {
 │⬡ Tanggal Islam : 
 │⬡ *%dateIslamic*
 │⬡ Waktu: *%time*
+│⬡ jasa Run : Wa.me/6289504575881
 │
 │⬡ Uptime: *%uptime (%muptime)*
 │⬡ Database: %rtotalreg dari %totalreg
@@ -153,8 +154,17 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
   if (teks == 'jadibot') tags = {
     'jadibot': 'Jadi Bot'
   }
+  if (teks == 'author') tags = {
+    'info': 'author'
+  }
   if (teks == 'info') tags = {
     'info': 'Info'
+  }
+  if (teks == 'rules') tags = {
+    'info': 'rules'
+  }
+  if (teks == 'sewa') tags = {
+    'info': 'sewa'
   }
   if (teks == 'tanpakategori') tags = {
     '': 'Tanpa Kategori'
@@ -226,7 +236,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       return conn.relayWAMessage(conn.prepareMessageFromContent(m.chat, {
         "listMessage": {
           "title": `${ucapan()}, ${name}`.trim(),
-          "description": `*© Vinzz Bot*
+          "description": `*© Null Bot*
          `.trim(),
           "footerText": "Jika menemukan bug,error atau kesulitan dalam penggunaan silahkan laporkan/tanyakan kepada owner.",
           "buttonText": "Click Here",
