@@ -358,14 +358,6 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
                   "description": "Info Tentang Bot",
                   "rowId": ".? info"
                 }, {
-                  "title": "|O| Rules",
-                  "description": "Info Rules Bot",
-                  "rowId": ".? rules"
-                }, {
-                  "title": "|@| Sewa",
-                  "description": "Info Sewa Bot",
-                  "rowId": ".? sewa"
-                }, {
                   "title": "|+| Tanpa Kategori",
                   "description": "Untuk Save Nomor",
                   "rowId": ".? tanpakategori"
@@ -373,6 +365,22 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
                   "title": "|👨‍💻| Owner",
                   "description": "Menu Khusu Owner",
                   "rowId": ".? owner"
+                }, {
+              	"title": "[💳] Sewa Bot",
+                  "description": "Pembayaran Hanya Via Pulsa & Dana",
+                  "rowId": ".sewa"
+                }, {
+              	"title": "[☁️] Uptime",
+                  "description": "Waktu Runtime Bot",
+                  "rowId": ".runtime"
+                }, {
+              	"title": "[⚠️] Peraturan",
+                  "description": "Peraturan Bot Yang Harus Di Patuhi",
+                  "rowId": ".rules"
+                }, {
+              	"title": "[🖱️] Developer",
+                  "description": "Pemilik Bot",
+                  "rowId": ".owner"
                 }
               ]
             }
