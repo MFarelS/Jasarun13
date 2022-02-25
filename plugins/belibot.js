@@ -4,7 +4,7 @@ let handler = async (m, { conn }) => {
 ╠➥ *jadi owner* :      *Rp 15000*
 ╠➥ *Permanen* : *Rp 10000*
 ╠➥ *Premium* :   *Rp 5000*
-╠➥ *Sc Bot* :       *Rp 40000*
+╠➥ *Sc Bot* :       *Rp 50000*
 ║
 ╠═〘 PEMBAYARAN 〙 ═
 ╠➥ Gopay, Dana, Dan Pulsa
