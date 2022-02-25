@@ -15,6 +15,8 @@ const defaultMenu = {
 │⬡ Level *%level (%exp / %maxexp)*
 │⬡ [%xp4levelup]
 │⬡ %totalexp XP secara Total
+│
+│⬡ Jasa Run Jadi Bot/Owner Bot permanen: wa.me/6289504575881
 │ 
 │⬡ Tanggal: *%week %weton, %date*
 │⬡ Tanggal Islam: *%dateIslamic*
@@ -220,7 +222,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
 			return conn.relayWAMessage(conn.prepareMessageFromContent(m.chat, {
                     "listMessage":  {
                         "title": `*${ucapan()}, ${name}*`.trim(),
-                        "description": `©Null Bot`.trim(),
+                        "description": `©Gira Bot`.trim(),
                         "footerText": "Jika menemukan bug, error atau kesulitan dalam penggunaan silahkan laporkan/tanyakan kepada owner.",
                         "buttonText": "*Click Here*",
                         "listType": "SINGLE_SELECT",
