@@ -1,10 +1,10 @@
 let fetch = require('node-fetch')
 let handler = async (m, { conn }) => {
 	conn.send3ButtonLoc(m.chat, await (await fetch(fla + 'sewa bot')).buffer(), `╠═〘 Beli Bot 〙 ═
-╠➥ *1 Bulan* :      *Rp 15000*
-╠➥ *Permanen* : *Rp 25000*
-╠➥ *Premium* :   *Rp 10000*
-╠➥ *Sc Bot* :        *Beli*
+╠➥ *jadi owner* :      *Rp 15000*
+╠➥ *Permanen* : *Rp 10000*
+╠➥ *Premium* :   *Rp 5000*
+╠➥ *Sc Bot* :       *Rp 40000*
 ║
 ╠═〘 PEMBAYARAN 〙 ═
 ╠➥ Gopay, Dana, Dan Pulsa
@@ -13,7 +13,7 @@ let handler = async (m, { conn }) => {
 ╠➥Ketuk Tombol Di Bawah Ya
 ║
 ╠═ ©2021 
-╠═ Scrip original by Tio
+╠═ Scrip original by Null Bot
 ╠═〘 ${namabot} 〙 ═`.trim(), footer, 'Dana', '#viadana', 'OVO', '#viaovo', 'Pulsa', '#viapulsa', m)
 }
 
