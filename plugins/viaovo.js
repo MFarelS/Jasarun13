@@ -23,7 +23,7 @@ let handler = async (m, { conn }) => {
 ║   *FITUR LAINNYA*
 ║ 
 ╠═ ©2021
-╠═ Scrip original by Tio
+╠═ Scrip original by Null
 ╠═〘 ${namabot} 〙 ═`.trim(), m)
 }
 
