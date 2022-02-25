@@ -626,7 +626,7 @@ END:VCARD
 `.trim()
     }]
   }, MessageType.contactsArray, { quoted: m })
-m.reply('Ini Adalah Nomor Owner/Creator Bot,Jangan Spam!')
+m.reply('Ini Adalah Nomor Owner/Creator Null Bot kak,Jangan di Spam yaa..!')
 }
 handler.help = ['owner', 'creator']
 handler.tags = ['info']
