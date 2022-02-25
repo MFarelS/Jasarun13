@@ -2,10 +2,10 @@ gc1 = 'https://chat.whatsapp.com/LoDkcjOaQP6FlGre5qbHLV'
 gc2 = ''
 gc3 = ''
 global.linkGC = ['https://chat.whats', 'https://chat.whatsapp.com/JEDQfzMGZan4HA98wtxsNL'] // ganti jadi group lu
-global.owner = ['6289504575881', '6289504575881', '6289504575881'] // Put your number here //owner eval
-global.kontak = ['6289504575881', '6289504575881', '6289504575881'] //Ketika ada yang ngetik #owner
+global.owner = ['6285846268962', '62885294787828', '6285846268962'] // Put your number here //owner eval
+global.kontak = ['6285846268962', '6285294787828', '6285846268962'] //Ketika ada yang ngetik #owner
 global.mods = ['0'] // Want some help?
-global.prems = ['6289504575881'] // Premium user has unlimited limit
+global.prems = ['6285294787828'] // Premium user has unlimited limit
 global.APIs = { // API Prefix
   // name: 'https://website'
   nrtm: 'https://nurutomo.herokuapp.com', 
@@ -41,20 +41,20 @@ xteamkey = 'cristian9407'
 namaig = 'GAK ADA :)'
 namagithub = 'GAK ADA :)'
 kasihcaption = `Done`
-namakontak1 = 'Swister'
-namakontak2 = 'swister'
+namakontak1 = 'GiraOfficial'
+namakontak2 = 'Elqmovie'
 
 //kasihcaption = `Done`
 
 // Sticker WM
-global.packname = 'Null Bot' // ganti aja
-global.author = 'Null Bot' // ganti aja
+global.packname = 'Gira Bot' // ganti aja
+global.author = 'Gira Bot' // ganti aja
 
 //yyy
-bc = 'NULL BOT' //Null Bot BROADCAST
-footer = '\n© Null Bot'
-namabot = 'Null Bot'
-namalu = 'Swister'
+bc = 'Gira BOT' //Null Bot BROADCAST
+footer = '\n© Gira Bot'
+namabot = 'Gira Bot'
+namalu = 'Elqmovie'
 
 
 // 
