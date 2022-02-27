@@ -41,8 +41,8 @@ xteamkey = 'cristian9407'
 namaig = 'GAK ADA :)'
 namagithub = 'GAK ADA :)'
 kasihcaption = `Done`
-namakontak1 = 'Order Bot'
-namakontak2 = 'IKYY_KUN'
+namakontak1 = 'IKYY_KUN'
+namakontak2 = 'Order Bot'
 
 //kasihcaption = `Done`
 
